@@ -50,12 +50,9 @@ const hlpFunctions = {
     return url;
   },
   parseSrcUrl: function (value, default_url = 'assets/none.png') {
-    console.log("Parse url:", value);
     let url = this.stripUrl(value);
-    console.log("Stripped url:", url);
     if (this.checkUrlOnline(url)) return url;
     url = WEBSITE_URL + url;
-    console.log("Full url:", url);
     if (this.checkUrlOnline(url)) return url;
     console.log("Could not parse url:", url);
     return default_url;
