@@ -87,7 +87,7 @@ let config = {
         labels: {
     /*  Header text in left top corner, just set to empty if you dont want any.
             {0} will be replaced with the favicon found here: "custom/favicon.png"  */
-            header: '{0} <a href="https://blog.briankristensen.dk/" target="_blank">Infoscreen DIY</a>',
+            header: '{0} <a href="https://github.com/bkristensen/InfoscreenWithGoogleSlides" target="_blank">Infoscreen DIY</a>',
     /*  Date label format, 
             {0} will be replaced with current date in selected language */
             date: '{0}',

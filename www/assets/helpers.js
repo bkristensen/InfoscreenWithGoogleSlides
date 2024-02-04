@@ -138,22 +138,28 @@ const hlpFunctions = {
       });
       return;
     }
-    $.getJSON(encodeURI(WEATHER_URL + _config.weatherService.location), {
-      lang: _config.languageId,
-      unitGroup: _config.weatherService.unitGroup,
-      include: "current",
-      contentType: "json",
-      key: _config.weatherService.key,
-    })
-      .done(function (json) {
-        let data = json.currentConditions;
-        data["description"] = json.days[0].description;
-        updateWeatherBanner(data);
+    try {
+      $.getJSON(encodeURI(WEATHER_URL + _config.weatherService.location), {
+        lang: _config.languageId,
+        unitGroup: _config.weatherService.unitGroup,
+        include: "current",
+        contentType: "json",
+        key: _config.weatherService.key,
       })
-      .fail(function (jqxhr, textStatus, error) {
-        let err = textStatus + ", " + error;
-        console.log("Request Failed: " + err);
-      });
+        .done(function (json) {
+          let data = json.currentConditions;
+          data["description"] = json.days[0].description;
+          updateWeatherBanner(data);
+        })
+        .fail(function (jqxhr, textStatus, error) {
+          _config.weatherService.showWeather = false;
+          let err = textStatus + ", " + error;
+          console.log("Request Failed: " + err);
+        });  
+    } catch (err) {
+      _config.weatherService.showWeather = false;
+      console.log("Weather Request Failed: " + err);
+    }
   },
 };
 

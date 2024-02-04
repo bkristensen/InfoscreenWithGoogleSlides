@@ -59,7 +59,7 @@ let config = {
             In Google Slides, go to this menu: 'File' / 'Share' / 'Publish to web'
             In the embed url copy the id from "https://docs.google.com/presentation/d/e/<SLIDE_ID>/embed?start=true..."   
             Example: '2PACX-1vSBNy-mN519II3gzObo8p32RhVHaL26vFruRj27zJMnrkyOQ1yyCjQBuYkZqlSvOaIWGQz9Woc_sFVM'   */
-        slideId: 'ADD GOOGLE SLIDE ID',
+        slideId: '',
     /*  Duration between slides in seconds. Default 20   */
         durationSek: 20,
     /*  Reload Webpage after ? seconds. Do this in order to get updated slides. Default 60  */
@@ -69,7 +69,7 @@ let config = {
     /*  Show or hide weather in bottom left corner */
         showWeather: true,
     /*  Your personal code for the weather api, create one here: https://www.visualcrossing.com/sign-up   */
-        key: 'ADD YOUR API KEY',
+        key: '',
     /*  Select the temperature unit.  https://www.visualcrossing.com/resources/documentation/weather-api/unit-groups-and-measurement-units/
             us:     Fahrenheight
             metric: Celcius   */
