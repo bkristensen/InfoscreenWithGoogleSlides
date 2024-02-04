@@ -1,0 +1,182 @@
+:root {
+  --frameWidth: calc(min(97.5vw, calc(95.55vh / 0.5625)));
+  --frameHeight: calc(var(--frameWidth) * 0.5625);
+  --frameScale: calc(var(--frameWidth) / 1280);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #111;
+  font-weight: 400;
+  font-family: "Google Sans", Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+  color: #ddd;
+  overflow: hidden;
+}
+
+body,
+img,
+div,
+span,
+.bodycontainer {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: black;
+}
+
+span {
+  font-size: small;
+}
+
+.sup {
+  font-size: smaller;
+  vertical-align: baseline;
+}
+
+.favicon {
+  display: inline-block;
+  background-image: url("../custom/favicon.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 6%;
+  height: 11%;
+}
+
+.bodycontainer {
+  position: absolute;
+  display: none;
+  width: var(--frameWidth);
+  height: var(--frameHeight);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.framecontent {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.dias-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% + 38px);
+  z-index: 1;
+  border: none;
+  overflow: hidden;
+}
+
+.textoverlay {
+  position: absolute;
+  z-index: 100;
+  left: 2%;
+  width: 96%;
+  top: 2.5%;
+  height: 95%;
+  font-size: calc(var(--frameWidth) * 0.01);
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+  height: 7%;
+  left: 0;
+  top: 1%;
+  z-index: 900;
+}
+
+.header_label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60%;
+  font-size: 3em;
+  text-align: left;
+  z-index: 1000;
+}
+
+.time_label,
+.date_label {
+  position: absolute;
+  width: 30%;
+  right: 0;
+  text-align: right;
+  z-index: 1000;
+}
+
+.time_label {
+  top: 0;
+  font-size: 2em;
+}
+
+.date_label {
+  bottom: 0;
+  font-size: 1.2em;
+}
+
+.weather_icon {
+  position: absolute;
+  z-index: 1000;
+  width: 7%;
+  top: 91%;
+  left: 0;
+}
+
+.footer {
+  position: absolute;
+  width: 100%;
+  height: 6%;
+  left: 0;
+  top: 95.5%;
+  z-index: 1000;
+}
+
+.footer div {
+  position: absolute;
+  z-index: 1000;
+}
+
+.weather_temp {
+  width: 9%;
+  left: 7%;
+  top: 0;
+  text-align: center;
+  font-size: 1.75em;
+}
+
+.weather_feel {
+  width: 9%;
+  left: 7%;
+  bottom: 0;
+  text-align: center;
+  font-size: 1em;
+  overflow: visible;
+}
+
+.weather_cond,
+.weather_text {
+  width: 84%;
+  right: 0;
+  bottom: 10%;
+}
+
+.weather_cond {
+  text-align: left;
+  font-size: 1.75em;
+}
+
+.weather_text {
+  text-align: right;
+  font-size: 1.45em;
+}
