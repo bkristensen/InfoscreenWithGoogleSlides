@@ -84,7 +84,7 @@ If you need more than one configuration, you can create as many *.conf.js files 
 |---|---|---|
 |background_image|'custom/background.gif'||
 |widthPrc|97|Width in percent.<br/>You can set it to 100 if you want to remove border on displays with no margin|
-|languageId|'en'|[Language Id]([README.md#list-of-language-ids)) for weekdays, months and weather data.|
+|languageId|'en'|[Language Id]([README.md#list-of-language-ids]) for weekdays, months and weather data.|
 
 ### Config Section - format
 |Key|Default|Description|
