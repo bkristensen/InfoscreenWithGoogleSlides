@@ -75,9 +75,51 @@ Just Start index.html in an browser and see the result.
 
 ### Customizations
 
-For more customization open the default.config.js file and edit it as you like, just remember to keep structure like this.
+For more customization open the default.config.js file and edit it as you like.
 
-Example config file:
+If you need more than one configuration, you can create as many *.conf.js files you need and just load with another setup by adding ?conf=NAME in the end of the link, like: index.html?conf=my_setting, and then the page will look for custom/my_setting.conf.js.
+
+### Config Main section
+|Key|Default|Description|
+|---|---|---|
+|background_image|'custom/background.gif'||
+|widthPrc|97|Width in percent.<br/>You can set it to 100 if you want to remove border on displays with no margin|
+|languageId|'en'|Language Id for weekdays, months and weather data.<br/>Select between:<br/>- ar (Arabic)<br/>- bg (Bulgiarian)<br/>- cs (Czech)<br/>- da (Danish)<br/>- de (German)<br/>- el (Greek Modern)<br/>- en (English)<br/>- es (Spanish)<br/>- fa (Farsi)<br/>- fi (Finnish)<br/>- fr (French)<br/>- he (Hebrew)<br/>- hu (Hungarian)<br/>- it (Italian)<br/>- ja (Japanese)<br/>- ko (Korean)<br/>- nl (Dutch)<br/>- pl (Polish)<br/>- pt (Portuguese)<br/>- ru (Russian)<br/>- sr (Serbian)<br/>- sv (Swedish)<br/>- tr (Turkish)<br/>- uk (Ukranian)<br/>- vi (Vietnamese)<br/>- zh (Chinese)|
+
+### Config Section - format
+|Key|Default|Description|
+|---|---|---|
+|dateformat_options|"{timeZone:'UTC'}"|You can change the format of the date by adding options. <br/>- weekday: 'narrow', 'short', 'long'<br/>- year: 'numeric', '2-digit',<br/>- month: 'numeric', '2-digit', 'narrow', 'short', 'long'<br/>- day: 'numeric', '2-digit'<br/>- timeZone:<br/>EXAMPLE: "{ weekday: 'long', day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC'}"|
+|time24hours|true|Show hour in 24 hours or false for 12 hours|
+
+### Config Section - format - labels
+> Labels can be formated as you wish, just add or remove '{?}' as needed and write any text you like
+|Key|Default|Description|
+|---|---|---|
+|header|'{0} Infoscreen DIY'|Header text in left top corner, just set to empty if you dont want any.<br/>    {0} will be replaced with the favicon found here: "custom/favicon.png"|
+|date|'{0}'|Date label format. <br/>    {0} will be replaced with current date in selected language|
+|time|'Time {0} {1}:{2}'|Time label format.<br/>    {0} will be replaced with am/pm if format.time24hours is false.<br/>    {1} will be replaced with current hour.<br/>    {2} will be replaced with current minute.<br/>    {3} will be replaced with current second|
+|temp|'{0}°'|Temperature label format. <br/>    {0} will be replaced with current temperature in selected unit group.|
+|feelslike|'feels like {0}°'|Feels Like label. <br/>    {0} will be replaced with current feels like temperature in selected unit group.|
+|condition|'{0}'|Weather condition label. <br/>    {0} will be replaced with current weather conditions in selected languageid|
+|description|'{0}'|Weather description label.<br/>    {0} will be replaced with current day weather description in selected languageid.|
+
+### Config Section - googleSlide
+|Key|Default|Description|
+|---|---|---|
+|slideId|''|Published Google Slide id  [https://support.google.com/docs/answer/183965?hl=en&co=GENIE.Platform%3DDesktop#publish].<br/>- In Google Slides, go to this menu: 'File' / 'Share' / 'Publish to web'<br/> -In the embed url copy the id from "https://docs.google.com/presentation/d/e/<SLIDE_ID>/embed?start=true..."   <br/>Example: '2PACX-1vSBNy-mN519II3gzObo8p32RhVHaL26vFruRj27zJMnrkyOQ1yyCjQBuYkZqlSvOaIWGQz9Woc_sFVM'|
+|durationSek|20|Duration between slides in seconds.|
+|reloadSlide|60|Reload Webpage after ? seconds. Do this in order to get updated slides.|
+
+### Config Section - weatherService
+|Key|Default|Description|
+|---|---|---|
+|showWeather|true|Show or hide weather in bottom left corner.|
+|key|''|Your personal code for the weather api, create one here: https://www.visualcrossing.com/sign-up|
+|unitGroup|'metric'|Select the temperature unit.  https://www.visualcrossing.com/resources/documentation/weather-api/unit-groups-and-measurement-units/<br/>- us:     Fahrenheight<br/>- metric: Celcius|
+|location|'copenhagen,denmark'|Location is the address, partial address or latitude,longitude location for which to retrieve weather data.<br/>You can also use US ZIP Codes.|
+    
+### Example config file:
 ```javascript
 let config = {
     // The background image is shown while loading the slide.
