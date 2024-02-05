@@ -1,12 +1,21 @@
 ![Infoscreen With Google slides and Weather Info](www/custom/favicon.png) 
 # Infoscreen showing Google Sildes
 
-## A simple website that embeds and loops thru an Google Slide, with overlay that shows date, time and local weather information.
-## Usefull for implementing a free infoscreen, that can be edit directly in [Google Slides](https://www.google.com/slides/about/).
+A simple website that embeds and loops thru an Google Slide, with overlay that shows date, time and local weather information.
+Usefull for implementing a free infoscreen, that can be edit directly in [Google Slides](https://www.google.com/slides/about/).
 
-[Show local weather data](README.md#show-local-weather-data)
+---
 
-### Add an Google Slide project
+## Content
+1. [Add an Google Slide project](README.md#embed-google-slide-project)
+2. [Show local weather data](README.md#show-local-weather-data)
+3. [Start the site](README.md#start-the-site)
+4. [Customizations](README.md#customizations)
+5. [Licence](README.md#license)
+
+---
+
+### Embed Google Slide project
 
 1. Create a [Google Slide project](https://slides.google.com/).
 
@@ -23,6 +32,9 @@ googleSlide: {
     reloadSlide: 60, 
 }
 ```
+
+[Content](README.md#content)
+---
 
 ### Show local weather data
 
@@ -49,9 +61,15 @@ weatherService: {
    b. or {CITY},{COUNTRY} 
    c. or {LATITUDE},{LONGITUDE} 
 
+[Content](README.md#content)
+---
+
 ### Start the site
 
 Just Start index.html in an browser and see the result.
+
+[Content](README.md#content)
+---
 
 ### Customizations
 
@@ -149,6 +167,9 @@ define(function () {
     }
 });
 ```
+
+[Content](README.md#content)
+---
 
 ### Licence
 
