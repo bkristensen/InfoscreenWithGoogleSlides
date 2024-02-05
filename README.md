@@ -4,6 +4,8 @@
 ## A simple website that embeds and loops thru an Google Slide, with overlay that shows date, time and local weather information.
 ## Usefull for implementing a free infoscreen, that can be edit directly in [Google Slides](https://www.google.com/slides/about/).
 
+[Show local weather data](README.md#show-local-weather-data)
+
 ### Add an Google Slide project
 
 1. Create a [Google Slide project](https://slides.google.com/).
