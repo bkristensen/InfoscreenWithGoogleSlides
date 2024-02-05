@@ -11,7 +11,7 @@ Usefull for implementing a free infoscreen, that can be edit directly in [Google
 2. [Show local weather data](README.md#show-local-weather-data)
 3. [Start the site](README.md#start-the-site)
 4. [Customizations](README.md#customizations)
-5. [Licence](README.md#license)
+5. [License](README.md#license)
 
 ---
 
@@ -174,7 +174,7 @@ define(function () {
 
 ---
 
-### Licence
+### License
 
 This project is licensed under the MIT license.
 
