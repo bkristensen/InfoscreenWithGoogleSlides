@@ -84,7 +84,7 @@ If you need more than one configuration, you can create as many *.conf.js files 
 |---|---|---|
 |background_image|'custom/background.gif'||
 |widthPrc|97|Width in percent.<br/>You can set it to 100 if you want to remove border on displays with no margin|
-|languageId|'en'|[Language Id](README.md#languages) for weekdays, months and weather data.|
+|languageId|'en'|[Language Id]([README.md#list-of-language-ids)) for weekdays, months and weather data.|
 
 ### Config Section - format
 |Key|Default|Description|
@@ -197,7 +197,7 @@ define(function () {
 
 [Content overwiev](README.md#content)
 
-### List of language id's {#languages}
+### List of language id's
 Language Id for weekdays, months and weather data, can be set by any of the following id's:
 |Language Id|Language|
 |---|---|
