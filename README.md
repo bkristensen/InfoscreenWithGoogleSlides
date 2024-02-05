@@ -32,8 +32,8 @@ googleSlide: {
     reloadSlide: 60, 
 }
 ```
+[Content](README.md#content)
 
-~[Content](README.md#content)~
 ---
 
 ### Show local weather data
