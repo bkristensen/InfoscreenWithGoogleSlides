@@ -1,4 +1,4 @@
-# Infoscreen showing Google Sildes
+# ![Infoscreen With Google slides and Weather Info](www/custom/favicon.png) Infoscreen showing Google Sildes
 
 > A simple website that embeds and loops thru an Google Slide, with overlay that shows date, time and local weather information.
 > Usefull for implementing a free infoscreen, that can be edit directly in [Google Slides](https://www.google.com/slides/about/).
