@@ -1,44 +1,43 @@
-# ![Infoscreen With Google slides and Weather Info](www/custom/favicon.png) Infoscreen showing Google Sildes
+![Infoscreen With Google slides and Weather Info](www/custom/favicon.png) 
+# Infoscreen showing Google Sildes
 
-> A simple website that embeds and loops thru an Google Slide, with overlay that shows date, time and local weather information.
-> Usefull for implementing a free infoscreen, that can be edit directly in [Google Slides](https://www.google.com/slides/about/).
+## A simple website that embeds and loops thru an Google Slide, with overlay that shows date, time and local weather information.
+## Usefull for implementing a free infoscreen, that can be edit directly in [Google Slides](https://www.google.com/slides/about/).
 
-## Add an Google Slide project
+### Add an Google Slide project
+
 1. Create a [Google Slide project](https://slides.google.com/).
 
 2. In Google Slides, go to this menu: 'File' / 'Share' / ['Publish to web'](https://support.google.com/docs/answer/183965?hl=en&co=GENIE.Platform%3DDesktop#publish).
 
 3. Copy the Slide Id in the url ["https://docs.google.com/presentation/d/e/<SLIDE_ID>/embed?start=true..."].
-   * Example id: 2PACX-1vSBNy-mN519II3gzObo8p32RhVHaL26vFruRj27zJMnrkyOQ1yyCjQBuYkZqlSvOaIWGQz9Woc_sFVM
+> Example id: 2PACX-1vSBNy-mN519II3gzObo8p32RhVHaL26vFruRj27zJMnrkyOQ1yyCjQBuYkZqlSvOaIWGQz9Woc_sFVM
 
 4. Open the default config file from /custom/default.conf.js and locate the googleSlide section, and add the Slide Id to the slideId key.
 ```javascript
-    googleSlide: {
-        slideId: 'ADD SLIDE ID HERE',
-    }
+googleSlide: {
+    slideId: 'ADD YOUR SLIDE ID HERE',
+    durationSek: 20,
+    reloadSlide: 60, 
+}
 ```
 
-## Show local weather data
+### Show local weather data
+
 We will use the free Weather Api provided by [VisualCrossing.com](https://www.visualcrossing.com).
 
 1. Create a [free acount](https://www.visualcrossing.com/sign-up) on [VisualCrossing Weather Api platform](https://www.visualcrossing.com/weather-api).
 
 2. Open the default config file from /custom/default.conf.js and locate the weatherService section.
 ```javascript
-    weatherService: {
-    /*  Show or hide weather in bottom left corner */
-        showWeather: true,
-    /*  Your personal code for the weather api, create one here: https://www.visualcrossing.com/sign-up   */
-        key: 'ADD YOUR API KEY HER',
-    /*  Select the temperature unit.  https://www.visualcrossing.com/resources/documentation/weather-api/unit-groups-and-measurement-units/
-            us:     Fahrenheight
-            metric: Celcius   */
-        unitGroup: 'metric',
-    /*  Location:  is the address, partial address or latitude,longitude location for which to retrieve weather data. 
-        You can also use US ZIP Codes.  */
-        location: 'copenhagen,denmark',
-    }
+weatherService: {
+    showWeather: true,
+    key: 'ADD YOUR API KEY HER',
+    unitGroup: 'metric',
+    location: 'copenhagen,denmark',
+}
 ```
+
 3. Enable weather service by setting the key 'showWeather' to true, and add your api key provided by VisualCrossing.
 
 4. Set the 'unitGroup' key to 'us' or 'metric' for showing in Fahrenheight or Celcius.
@@ -48,10 +47,12 @@ We will use the free Weather Api provided by [VisualCrossing.com](https://www.vi
    b. or {CITY},{COUNTRY} 
    c. or {LATITUDE},{LONGITUDE} 
 
-## Start the site
+### Start the site
+
 Just Start index.html in an browser and see the result.
 
-## Customizations
+### Customizations
+
 For more customization open the default.config.js file and edit it as you like, just remember to keep structure like this.
 
 ```javascript
@@ -145,9 +146,9 @@ define(function () {
         }
     }
 });
-
 ```
-## Licence
+
+### Licence
 
 This project is licensed under the MIT license.
 
