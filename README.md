@@ -32,7 +32,7 @@ googleSlide: {
     reloadSlide: 60, 
 }
 ```
-[Content](README.md#content)
+[Content overwiev](README.md#content)
 
 ---
 
@@ -61,14 +61,16 @@ weatherService: {
    b. or {CITY},{COUNTRY} 
    c. or {LATITUDE},{LONGITUDE} 
 
-[Content](README.md#content)
+[Content overwiev](README.md#content)
+
 ---
 
 ### Start the site
 
 Just Start index.html in an browser and see the result.
 
-[Content](README.md#content)
+[Content overwiev](README.md#content)
+
 ---
 
 ### Customizations
@@ -168,7 +170,8 @@ define(function () {
 });
 ```
 
-[Content](README.md#content)
+[Content overwiev](README.md#content)
+
 ---
 
 ### Licence
@@ -176,3 +179,7 @@ define(function () {
 This project is licensed under the MIT license.
 
 Copyrights on the definition files are respective of each contributor listed at the beginning of each definition file.
+
+
+[Content overwiev](README.md#content)
+
