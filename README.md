@@ -7,7 +7,7 @@ Usefull for implementing a free infoscreen, that can be edit directly in [Google
 ---
 
 ## Content
-1. [Add an Google Slide project](README.md#embed-google-slide-project)
+1. [Embed an Google Slide project](README.md#embed-google-slide-project)
 2. [Show local weather data](README.md#show-local-weather-data)
 3. [Start the site](README.md#start-the-site)
 4. [Customizations](README.md#customizations)
@@ -33,7 +33,7 @@ googleSlide: {
 }
 ```
 
-[Content](README.md#content)
+~[Content](README.md#content)~
 ---
 
 ### Show local weather data
