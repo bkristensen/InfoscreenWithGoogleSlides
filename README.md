@@ -84,12 +84,14 @@ If you need more than one configuration, you can create as many *.conf.js files 
 |---|---|---|
 |background_image|'custom/background.gif'||
 |widthPrc|97|Width in percent.<br/>You can set it to 100 if you want to remove border on displays with no margin|
-|languageId|'en'|Language Id for weekdays, months and weather data.<br/>Select between:<br/>- ar (Arabic)<br/>- bg (Bulgiarian)<br/>- cs (Czech)<br/>- da (Danish)<br/>- de (German)<br/>- el (Greek Modern)<br/>- en (English)<br/>- es (Spanish)<br/>- fa (Farsi)<br/>- fi (Finnish)<br/>- fr (French)<br/>- he (Hebrew)<br/>- hu (Hungarian)<br/>- it (Italian)<br/>- ja (Japanese)<br/>- ko (Korean)<br/>- nl (Dutch)<br/>- pl (Polish)<br/>- pt (Portuguese)<br/>- ru (Russian)<br/>- sr (Serbian)<br/>- sv (Swedish)<br/>- tr (Turkish)<br/>- uk (Ukranian)<br/>- vi (Vietnamese)<br/>- zh (Chinese)|
+|languageId|'en'|Language Id for weekdays, months and weather data.|
+|||Select between:<br/>- ar (Arabic)<br/>- bg (Bulgiarian)<br/>- cs (Czech)<br/>- da (Danish)<br/>- de (German)<br/>- el (Greek Modern)<br/>- en (English)<br/>- es (Spanish)<br/>- fa (Farsi)<br/>- fi (Finnish)<br/>- fr (French)<br/>- he (Hebrew)<br/>- hu (Hungarian)<br/>- it (Italian)<br/>- ja (Japanese)<br/>- ko (Korean)<br/>- nl (Dutch)<br/>- pl (Polish)<br/>- pt (Portuguese)<br/>- ru (Russian)<br/>- sr (Serbian)<br/>- sv (Swedish)<br/>- tr (Turkish)<br/>- uk (Ukranian)<br/>- vi (Vietnamese)<br/>- zh (Chinese)|
 
 ### Config Section - format
 |Key|Default|Description|
 |---|---|---|
-|dateformat_options|"{timeZone:'UTC'}"|You can change the format of the date by adding options. <br/>- weekday: 'narrow', 'short', 'long'<br/>- year: 'numeric', '2-digit',<br/>- month: 'numeric', '2-digit', 'narrow', 'short', 'long'<br/>- day: 'numeric', '2-digit'<br/>- timeZone:<br/>EXAMPLE: "{ weekday: 'long', day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC'}"|
+|dateformat_options|"{timeZone:'UTC'}"|Date time format|
+|||You can change the format of the date by adding options. <br/>- weekday: 'narrow', 'short', 'long'<br/>- year: 'numeric', '2-digit',<br/>- month: 'numeric', '2-digit', 'narrow', 'short', 'long'<br/>- day: 'numeric', '2-digit'<br/>- timeZone:<br/>EXAMPLE: "{ weekday: 'long', day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC'}"|
 |time24hours|true|Show hour in 24 hours or false for 12 hours|
 
 ### Config Section - format - labels
@@ -107,7 +109,8 @@ If you need more than one configuration, you can create as many *.conf.js files 
 ### Config Section - googleSlide
 |Key|Default|Description|
 |---|---|---|
-|slideId|''|Published Google Slide id  [https://support.google.com/docs/answer/183965?hl=en&co=GENIE.Platform%3DDesktop#publish].<br/>- In Google Slides, go to this menu: 'File' / 'Share' / 'Publish to web'<br/> -In the embed url copy the id from "https://docs.google.com/presentation/d/e/<SLIDE_ID>/embed?start=true..."   <br/>Example: '2PACX-1vSBNy-mN519II3gzObo8p32RhVHaL26vFruRj27zJMnrkyOQ1yyCjQBuYkZqlSvOaIWGQz9Woc_sFVM'|
+|slideId|''|Published Google Slide id  [https://support.google.com/docs/answer/183965?hl=en&co=GENIE.Platform%3DDesktop#publish].|
+|||- In Google Slides, go to this menu: 'File' / 'Share' / 'Publish to web'<br/> -In the embed url copy the id from "https://docs.google.com/presentation/d/e/<SLIDE_ID>/embed?start=true..."   <br/>Example: '2PACX-1vSBNy-mN519II3gzObo8p32RhVHaL26vFruRj27zJMnrkyOQ1yyCjQBuYkZqlSvOaIWGQz9Woc_sFVM'|
 |durationSek|20|Duration between slides in seconds.|
 |reloadSlide|60|Reload Webpage after ? seconds. Do this in order to get updated slides.|
 
@@ -116,7 +119,8 @@ If you need more than one configuration, you can create as many *.conf.js files 
 |---|---|---|
 |showWeather|true|Show or hide weather in bottom left corner.|
 |key|''|Your personal code for the weather api, create one here: https://www.visualcrossing.com/sign-up|
-|unitGroup|'metric'|Select the temperature unit.  https://www.visualcrossing.com/resources/documentation/weather-api/unit-groups-and-measurement-units/<br/>- us:     Fahrenheight<br/>- metric: Celcius|
+|unitGroup|'metric'|Select the temperature unit.|
+|||- us:     Fahrenheight<br/>- metric: Celcius<br/>https://www.visualcrossing.com/resources/documentation/weather-api/unit-groups-and-measurement-units/|
 |location|'copenhagen,denmark'|Location is the address, partial address or latitude,longitude location for which to retrieve weather data.<br/>You can also use US ZIP Codes.|
     
 ### Example config file:
