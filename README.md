@@ -77,90 +77,71 @@ Just Start index.html in an browser and see the result.
 
 For more customization open the default.config.js file and edit it as you like, just remember to keep structure like this.
 
+Example config file:
 ```javascript
-/*  ONLY EDIT VALUES [<KEY>: <VALUE>,]
-    KEYS AND STRUCTURE MUST BE INTACT IN ORDER TO WORK  */
 let config = {
+    // The background image is shown while loading the slide.
     background_image: "custom/background.gif",
-    /*  Width in percent
-        You can set it to 100 if you want to remove border on displays with no margin */
+    // Width in percent, 100 = no margin.
     widthPrc: 97, // in percent
-    /*  Language Id for weekdays, months and weather data
-        Select between:
-          ar (Arabic), bg (Bulgiarian), cs (Czech), da (Danish), de (German), 
-          el (Greek Modern), en (English), es (Spanish) ), fa (Farsi), fi (Finnish), 
-          fr (French), he (Hebrew), hu, (Hungarian), it (Italian), ja (Japanese), 
-          ko (Korean), nl (Dutch), pl (Polish), pt (Portuguese), ru (Russian), 
-          sr (Serbian), sv (Swedish), tr (Turkish), uk (Ukranian), vi (Vietnamese) 
-          and zh (Chinese) 
-          */
+    // Language Id for date and weather data
     languageId: 'en',   
     format: {
-    /*  You can change the format of the date by adding options. 
-            weekday: 'narrow' | 'short' | 'long'
-            year: 'numeric' | '2-digit',
-            month: 'numeric' | '2-digit' | 'narrow' | 'short' | 'long'
-            day: 'numeric' | '2-digit'
-            timeZone:
-        EXAMPLE: "{ weekday: 'long', day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC'}"  */
-        dateformat_options: { timeZone: 'UTC' },
-    /*  Show hour in 24 hours or false for 12 hours */
+        // Set the format of the date by adding options. 
+        dateformat_options: {weekday:'long',day:'2-digit',month:'2-digit',timeZone:'UTC'},
+        // Show hour in 24 hours or false for 12 hours */
         time24hours: true,
-    /*  Labels can be formated as you wish, just add or remove '{?}' as needed and write any text you like */
+        // Labels can be formated as you wish, if empty, label is not shown.
         labels: {
-    /*  Header text in left top corner, just set to empty if you dont want any.
-            {0} will be replaced with the favicon found here: "custom/favicon.png"  */
-            header: '{0} <a href="https://github.com/bkristensen/InfoscreenWithGoogleSlides" target="_blank">Infoscreen DIY</a>',
-    /*  Date label format, 
-            {0} will be replaced with current date in selected language */
+            // Header text in left top corner, empty if none.
+            //    {0} will be replaced with 'custom/favicon.png'
+            header: '{0} Infoscreen DIY',
+            // Date label format. 
+            //    {0} will be replaced with current date.
             date: '{0}',
-    /*  Time label format.
-            {0} will be replaced with am/pm if format.time24hours is false
-            {1} will be replaced with current hour, 
-            {2} will be replaced with current minute,
-            {3} will be replaced with current second  */
+            // Time label format.
+            //    {0} will be replaced with am/pm.
+            //    {1} will be replaced with current hour.
+            //    {2} will be replaced with current minute.
+            //    {3} will be replaced with current second.
             time:'Time {0} {1}:{2}',
-    /*  Temperature label format, 
-            {0} will be replaced with current temperature in selected unit group  */
+            // Temperature label format.
+            //    {0} will be replaced with current temperature.
             temp: '{0}°',
-    /*  Feels Like label, 
-            {0} will be replaced with current feels like temperature in selected unit group  */
+            // Feels Like label.
+            //    {0} will be replaced with feels like temperature.
             feelslike: 'feels like {0}°',
-    /*  Weather condition label, 
-            {0} will be replaced with current weather conditions in selected languageid  */
+            // Weather condition label.
+            //    {0} will be replaced with weather condition.
             condition: '{0}',
-    /*  Weather description label, 
-            {0} will be replaced with current day weather description in selected languageid  */
+            // Weather description label.
+            //    {0} will be replaced with weather description.
             description: '{0}'
         }
     },
     googleSlide: {
-    /*  Published Google Slide id  [https://support.google.com/docs/answer/183965?hl=en&co=GENIE.Platform%3DDesktop#publish] 
-            In Google Slides, go to this menu: 'File' / 'Share' / 'Publish to web'
-            In the embed url copy the id from "https://docs.google.com/presentation/d/e/<SLIDE_ID>/embed?start=true..."   
-            Example: '2PACX-1vSBNy-mN519II3gzObo8p32RhVHaL26vFruRj27zJMnrkyOQ1yyCjQBuYkZqlSvOaIWGQz9Woc_sFVM'   */
+        // Published Google Slide id.
         slideId: 'ADD YOUR SLIDE ID HERE',
-    /*  Duration between slides in seconds. Default 20   */
+        // Duration between slides in seconds.
         durationSek: 20,
-    /*  Reload Webpage after ? seconds. Do this in order to get updated slides. Default 60  */
+        // Reload Webpage after ? seconds.
+        //    Do this in order to get updated slides.
         reloadSlide: 60, 
     },
     weatherService: {
-    /*  Show or hide weather in bottom left corner */
+        // Show or hide weather info in bottom left corner.
         showWeather: true,
-    /*  Your personal code for the weather api, create one here: https://www.visualcrossing.com/sign-up   */
+        // Your personal code for the weather api.
         key: 'ADD YOUR API KEY HERE',
-    /*  Select the temperature unit.  https://www.visualcrossing.com/resources/documentation/weather-api/unit-groups-and-measurement-units/
-            us:     Fahrenheight
-            metric: Celcius   */
+        // Select the temperature unit.
+        //    us:       Fahrenheight
+        //    metric:   Celcius
         unitGroup: 'metric',
-    /*  Location:  is the address, partial address or latitude,longitude location for which to retrieve weather data. 
-        You can also use US ZIP Codes.  */
+        // Location:  is the address, partial address or 
+        //    latitude,longitude location or us zip code.
         location: 'london. united-kingdom',
     }
 };
-
-// DONT EDIT BELOW THIS LINE!!!
 define(function () {
     return {
         getConfig: function () {
