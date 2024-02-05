@@ -84,14 +84,12 @@ If you need more than one configuration, you can create as many *.conf.js files 
 |---|---|---|
 |background_image|'custom/background.gif'||
 |widthPrc|97|Width in percent.<br/>You can set it to 100 if you want to remove border on displays with no margin|
-|languageId|'en'|Language Id for weekdays, months and weather data.|
-|||Select between:<br/>- ar (Arabic)<br/>- bg (Bulgiarian)<br/>- cs (Czech)<br/>- da (Danish)<br/>- de (German)<br/>- el (Greek Modern)<br/>- en (English)<br/>- es (Spanish)<br/>- fa (Farsi)<br/>- fi (Finnish)<br/>- fr (French)<br/>- he (Hebrew)<br/>- hu (Hungarian)<br/>- it (Italian)<br/>- ja (Japanese)<br/>- ko (Korean)<br/>- nl (Dutch)<br/>- pl (Polish)<br/>- pt (Portuguese)<br/>- ru (Russian)<br/>- sr (Serbian)<br/>- sv (Swedish)<br/>- tr (Turkish)<br/>- uk (Ukranian)<br/>- vi (Vietnamese)<br/>- zh (Chinese)|
+|languageId|'en'|[Language Id](README.md#languages) for weekdays, months and weather data.|
 
 ### Config Section - format
 |Key|Default|Description|
 |---|---|---|
-|dateformat_options|"{timeZone:'UTC'}"|Date time format|
-|||You can change the format of the date by adding options. <br/>- weekday: 'narrow', 'short', 'long'<br/>- year: 'numeric', '2-digit',<br/>- month: 'numeric', '2-digit', 'narrow', 'short', 'long'<br/>- day: 'numeric', '2-digit'<br/>- timeZone:<br/>EXAMPLE: "{ weekday: 'long', day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC'}"|
+|dateformat_options|"{timeZone:'UTC'}"|[^2]Date time format<br/>EXAMPLE: "{ weekday: 'long', day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC'}"||
 |time24hours|true|Show hour in 24 hours or false for 12 hours|
 
 ### Config Section - format - labels
@@ -196,6 +194,50 @@ define(function () {
     }
 });
 ```
+
+[Content overwiev](README.md#content)
+
+### List of language id's {#languages}
+Language Id for weekdays, months and weather data, can be set by any of the following id's:
+|Language Id|Language|
+|---|---|
+|ar|Arabic|
+|bg|Bulgiarian|
+|cs|Czech|
+|da|Danish|
+|de|German|
+|el|Greek Modern|
+|en|English|
+|es|Spanish|
+|fa|Farsi|
+|fi|Finnish|
+|fr|French|
+|he|Hebrew|
+|hu|Hungarian|
+|it|Italian|
+|ja|Japanese|
+|ko|Korean|
+|nl|Dutch|
+|pl|Polish|
+|pt|Portuguese|
+|ru|Russian|
+|sr|Serbian|
+|sv|Swedish|
+|tr|Turkish|
+|uk|Ukranian|
+|vi|Vietnamese|
+|zh|Chinese|
+
+[^2]: ### Date time format options
+You can change the format of the date by adding any of the following options.
+|Key|Values|
+|---|---|
+|weekday|- 'narrow'<br/>- 'short'<br/>- 'long'|
+|year|- 'numeric'<br/>- '2-digit'|
+|month|- 'numeric'<br/>- '2-digit'<br/>- 'narrow'<br/>- 'short'<br/>- 'long'|
+|day|- 'numeric'<br/>- '2-digit'|
+|timeZone|- 'UTC'|
+
 
 [Content overwiev](README.md#content)
 
