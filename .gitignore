@@ -395,4 +395,7 @@ FodyWeavers.xsd
 *.msp
 
 # JetBrains Rider
-*.sln.iml
+*.sln.iml.md
+*_.*
+markdown-cheat-sheet.md
+doc/Unsplash.json
