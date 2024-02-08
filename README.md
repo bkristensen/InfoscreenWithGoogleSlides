@@ -10,25 +10,28 @@ Usefull for implementing a free infoscreen, that can be edit directly in [Google
 ## Content
 
 - [Infoscreen showing Google Sildes](#infoscreen-showing-google-sildes)
-- [Content](#content)
-- [Embed Google Slide project](#embed-google-slide-project)
-- [Show local weather data](#show-local-weather-data)
-- [Start the site](#start-the-site)
-- [Customizations](#customizations)
-  - [Config Main section](#config-main-section)
-  - [Config Section - format](#config-section---format)
-  - [Config Section - format - labels](#config-section---format---labels)
-  - [Config Section - googleSlide](#config-section---googleslide)
-  - [Config Section - weatherService](#config-section---weatherservice)
-- [Apendix](#apendix)
-  - [Example config file](#example-config-file)
-  - [List of language id's](#list-of-language-ids)
-  - [Date time format options](#date-time-format-options)
-- [License](#license)
+  - [Content](#content)
+  - [Embed Google Slide project](#embed-google-slide-project)
+  - [Show local weather data](#show-local-weather-data)
+  - [Start the site](#start-the-site)
+  - [Customizations](#customizations)
+    - [Config Main section](#config-main-section)
+    - [Config Section - format](#config-section---format)
+    - [Config Section - format - labels](#config-section---format---labels)
+    - [Config Section - googleSlide](#config-section---googleslide)
+    - [Config Section - weatherService](#config-section---weatherservice)
+  - [Apendix](#apendix)
+    - [Label positions](#label-positions)
+    - [Example config file](#example-config-file)
+    - [List of language id's](#list-of-language-ids)
+    - [Date time format options](#date-time-format-options)
+    - [License](#license)
 
 ---
 
 ## Embed Google Slide project
+
+> [Content overwiev](#content)
 
 1. Create a [Google Slide project](https://slides.google.com/).
 
@@ -54,7 +57,8 @@ googleSlide: {
 ---
 
 ## Show local weather data
-[Content overwiev](#content)
+
+> [Content overwiev](#content)
 
 We will use the free Weather Api provided by [VisualCrossing.com](https://www.visualcrossing.com).
 
@@ -83,21 +87,24 @@ weatherService: {
 ---
 
 ## Start the site
-[Content overwiev](#content)
+
+> [Content overwiev](#content)
 
 Just Start [index.html](www/index.html) in an browser and see the result.
 
 ---
 
 ## Customizations
-[Content overwiev](#content)
+
+> [Content overwiev](#content)
 
 For more customization open the [custom/default.config.js](www/custom/default.config.js) file and edit it as you like.
 
 If you need more than one configuration, you can create as many `*.conf.js` files you need and just load with another setup by adding `?conf=NAME` in the end of the link, like: [index.html?conf=my_setting](www/index.html?conf=my_setting), and then the page will look for [custom/my_setting.conf.js](www/custom/my_setting.conf.js).
 
 ### Config Main section
-[Content overwiev](#content)
+
+> [Content overwiev](#content)
 
 |Key|Default|Description|
 |---|---|---|
@@ -106,7 +113,8 @@ If you need more than one configuration, you can create as many `*.conf.js` file
 |languageId|'en'|[Language Id](#list-of-language-ids) for **weekdays**, **months** and **weather descriptions**.|
 
 ### Config Section - format
-[Content overwiev](#content)
+
+> [Content overwiev](#content)
 
 |Key|Default|Description|
 |---|---|---|
@@ -114,9 +122,10 @@ If you need more than one configuration, you can create as many `*.conf.js` file
 |time24hours|true|Show hour in 24 hours or false for 12 hours|
 
 ### Config Section - format - labels
-[Content overwiev](#content)
 
-> Labels can be formated as you wish, just add or remove '{?}' as needed and write any text you like.
+> [Content overwiev](#content)
+
+Labels can be formated as you wish, just add or remove '{?}' as needed and write any text you like.
 
 |Key|Default|Description|
 |---|---|---|
@@ -129,7 +138,8 @@ If you need more than one configuration, you can create as many `*.conf.js` file
 |description|'**{0}**'|Weather description label.<br/>    **{0}** will be replaced with current day weather description in selected languageid.|
 
 ### Config Section - googleSlide
-[Content overwiev](#content)
+
+> [Content overwiev](#content)
 
 |Key|Default|Description|
 |---|---|---|
@@ -139,7 +149,8 @@ If you need more than one configuration, you can create as many `*.conf.js` file
 |reloadSlide|60|Reload Webpage after **?** seconds.<br>Do this in order to get updated slides.|
 
 ### Config Section - weatherService
-[Content overwiev](#content)
+
+> [Content overwiev](#content)
 
 |Key|Default|Description|
 |---|---|---|
@@ -152,8 +163,16 @@ If you need more than one configuration, you can create as many `*.conf.js` file
 
 ## Apendix
 
+### Label positions
+
+This is a example of the standard label positions.
+To change positions or format, please go to [assets/style.css](www/assets/style.css).
+
+![Example of the standard label positions](asserts/LabelPositions.png)
+
 ### Example config file
-[Content overwiev](#content)
+
+> [Content overwiev](#content)
 
 ```javascript
 let config = {
@@ -227,8 +246,10 @@ define(function () {
     }
 });
 ```
+
 ### List of language id's
-[Content overwiev](#content)
+
+> [Content overwiev](#content)
 
 Language Id for weekdays, months and weather data, can be set by any of the following id's:
 |Language Id|Language|
@@ -261,7 +282,8 @@ Language Id for weekdays, months and weather data, can be set by any of the foll
 |zh|Chinese|
 
 ### Date time format options
-[Content overwiev](#content)
+
+> [Content overwiev](#content)
 
 You can change the format of the date by adding any of the following options.
 |Key|Values|
@@ -275,7 +297,8 @@ You can change the format of the date by adding any of the following options.
 ---
 
 ### License
-[Content overwiev](#content)
+
+> [Content overwiev](#content)
 
 This project is licensed under the MIT license.
 
@@ -305,5 +328,5 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 ---
-[Content overwiev](#content)
 
+> [Content overwiev](#content)
