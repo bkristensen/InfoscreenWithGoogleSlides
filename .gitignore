@@ -399,3 +399,6 @@ FodyWeavers.xsd
 *_.*
 markdown-cheat-sheet.md
 doc/Unsplash.json
+www/assets/outlined.css
+www/assets/outlined.js
+www/debug.html
