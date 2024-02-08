@@ -28,7 +28,7 @@ Usefull for implementing a free infoscreen, that can be edit directly in [Google
 
 ---
 
-### Embed Google Slide project
+## Embed Google Slide project
 
 1. Create a [Google Slide project](https://slides.google.com/).
 
@@ -51,11 +51,10 @@ googleSlide: {
 }
 ```
 
-[Content overwiev](#content)
-
 ---
 
-### Show local weather data
+## Show local weather data
+[Content overwiev](#content)
 
 We will use the free Weather Api provided by [VisualCrossing.com](https://www.visualcrossing.com).
 
@@ -81,25 +80,24 @@ weatherService: {
    - `{CITY},{COUNTRY}`
    - `{LATITUDE},{LONGITUDE}`
 
-[Content overwiev](#content)
-
 ---
 
-### Start the site
+## Start the site
+[Content overwiev](#content)
 
 Just Start [index.html](www/index.html) in an browser and see the result.
 
-[Content overwiev](#content)
-
 ---
 
-### Customizations
+## Customizations
+[Content overwiev](#content)
 
 For more customization open the [custom/default.config.js](www/custom/default.config.js) file and edit it as you like.
 
 If you need more than one configuration, you can create as many `*.conf.js` files you need and just load with another setup by adding `?conf=NAME` in the end of the link, like: [index.html?conf=my_setting](www/index.html?conf=my_setting), and then the page will look for [custom/my_setting.conf.js](www/custom/my_setting.conf.js).
 
 ### Config Main section
+[Content overwiev](#content)
 
 |Key|Default|Description|
 |---|---|---|
@@ -108,6 +106,7 @@ If you need more than one configuration, you can create as many `*.conf.js` file
 |languageId|'en'|[Language Id](#list-of-language-ids) for **weekdays**, **months** and **weather descriptions**.|
 
 ### Config Section - format
+[Content overwiev](#content)
 
 |Key|Default|Description|
 |---|---|---|
@@ -115,6 +114,7 @@ If you need more than one configuration, you can create as many `*.conf.js` file
 |time24hours|true|Show hour in 24 hours or false for 12 hours|
 
 ### Config Section - format - labels
+[Content overwiev](#content)
 
 > Labels can be formated as you wish, just add or remove '{?}' as needed and write any text you like.
 
@@ -129,6 +129,8 @@ If you need more than one configuration, you can create as many `*.conf.js` file
 |description|'**{0}**'|Weather description label.<br/>    **{0}** will be replaced with current day weather description in selected languageid.|
 
 ### Config Section - googleSlide
+[Content overwiev](#content)
+
 |Key|Default|Description|
 |---|---|---|
 |slideId|''|[Published Google Slide id.](https://support.google.com/docs/answer/183965?hl=en&co=GENIE.Platform%3DDesktop#publish)|
@@ -137,6 +139,7 @@ If you need more than one configuration, you can create as many `*.conf.js` file
 |reloadSlide|60|Reload Webpage after **?** seconds.<br>Do this in order to get updated slides.|
 
 ### Config Section - weatherService
+[Content overwiev](#content)
 
 |Key|Default|Description|
 |---|---|---|
@@ -145,9 +148,12 @@ If you need more than one configuration, you can create as many `*.conf.js` file
 |unitGroup|'metric'|Select the [temperature unit](https://www.visualcrossing.com/resources/documentation/weather-api/unit-groups-and-measurement-units/).<br>- **us**:     Fahrenheight<br>- **metric**: Celcius|
 |location|'copenhagen,denmark'|Location is the **address**, **partial address** or **latitude,longitude** location for which to retrieve weather data.<br/>You can also use **US ZIP Codes**.|
 
+---
+
 ## Apendix
 
 ### Example config file
+[Content overwiev](#content)
 
 ```javascript
 let config = {
@@ -221,10 +227,8 @@ define(function () {
     }
 });
 ```
-
-[Content overwiev](#content)
-
 ### List of language id's
+[Content overwiev](#content)
 
 Language Id for weekdays, months and weather data, can be set by any of the following id's:
 |Language Id|Language|
@@ -256,9 +260,9 @@ Language Id for weekdays, months and weather data, can be set by any of the foll
 |vi|Vietnamese|
 |zh|Chinese|
 
+### Date time format options
 [Content overwiev](#content)
 
-### Date time format options
 You can change the format of the date by adding any of the following options.
 |Key|Values|
 |---|---|
@@ -268,12 +272,10 @@ You can change the format of the date by adding any of the following options.
 |day|- 'numeric'<br/>- '2-digit'|
 |timeZone|- 'UTC'|
 
-
-[Content overwiev](#content)
-
 ---
 
 ### License
+[Content overwiev](#content)
 
 This project is licensed under the MIT license.
 
@@ -302,6 +304,6 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
-
+---
 [Content overwiev](#content)
 
