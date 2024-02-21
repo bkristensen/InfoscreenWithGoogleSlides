@@ -1,15 +1,15 @@
-# Infoscreen showing Google Sildes
+# InfoScreen showing Google Slides
 
-![Infoscreen With Google slides and Weather Info](www/custom/favicon.png)
+![InfoScreen With Google slides and Weather Info](www/custom/favicon.png)
 
 A simple website that embeds and loops thru an Google Slide, with overlay that shows date, time and local weather information.
-Usefull for implementing a free infoscreen, that can be edit directly in [Google Slides](https://www.google.com/slides/about/).
+Useful for implementing a free InfoScreen, that can be edit directly in [Google Slides](https://www.google.com/slides/about/).
 
 ---
 
 ## Content
 
-- [Infoscreen showing Google Sildes](#infoscreen-showing-google-sildes)
+- [InfoScreen showing Google Slides](#infoscreen-showing-google-slides)
   - [Content](#content)
   - [Embed Google Slide project](#embed-google-slide-project)
   - [Show local weather data](#show-local-weather-data)
@@ -20,31 +20,35 @@ Usefull for implementing a free infoscreen, that can be edit directly in [Google
     - [Config Section - format - labels](#config-section---format---labels)
     - [Config Section - googleSlide](#config-section---googleslide)
     - [Config Section - weatherService](#config-section---weatherservice)
-  - [Apendix](#apendix)
+  - [Appendix](#appendix)
     - [Label positions](#label-positions)
     - [Example config file](#example-config-file)
     - [List of language id's](#list-of-language-ids)
     - [Date time format options](#date-time-format-options)
     - [License](#license)
+  - [MIT License](#mit-license)
+    - [Copyright (c) 2024 Brian Kristensen](#copyright-c-2024-brian-kristensen)
 
 ---
 
 ## Embed Google Slide project
 
-> [Content overwiev](#content)
+> [Content overview](#content)
 
-1. Create a [Google Slide project](https://slides.google.com/).
+- Create a [Google Slide project](https://slides.google.com/).
 
-2. In Google Slides, go to this menu: 'File' / 'Share' / ['Publish to web'](https://support.google.com/docs/answer/183965?hl=en&co=GENIE.Platform%3DDesktop#publish).
+- In Google Slides, go to this menu: 'File' / 'Share' / ['Publish to web'](https://support.google.com/docs/answer/183965?hl=en&co=GENIE.Platform%3DDesktop#publish).
 
-3. Copy the Slide Id in the url
+- Copy the Slide Id in the URL
 
-> ...docs.google.com/presentation/d/e/**SLIDE_ID**/embed?start=true...
+```url
+...docs.google.com/presentation/d/e/<SLIDE_ID>/embed?start=true...
+```
 
 Example id:
 `2PACX-1vSBNy-mN519II3gzObo8p32RhVHaL26vFruRj27zJMnrkyOQ1yyCjQBuYkZqlSvOaIWGQz9Woc_sFVM`
 
-4. Open the default config file from /custom/default.conf.js and locate the googleSlide section, and add the Slide Id to the slideId key.
+- Open the default config file from /custom/default.conf.js and locate the googleSlide section, and add the Slide Id to the slideId key.
 
 ```javascript
 googleSlide: {
@@ -58,13 +62,13 @@ googleSlide: {
 
 ## Show local weather data
 
-> [Content overwiev](#content)
+> [Content overview](#content)
 
-We will use the free Weather Api provided by [VisualCrossing.com](https://www.visualcrossing.com).
+We will use the free Weather API provided by [VisualCrossing.com](https://www.visualcrossing.com).
 
-1. Create a [free acount](https://www.visualcrossing.com/sign-up) on [VisualCrossing Weather Api platform](https://www.visualcrossing.com/weather-api).
+- Create a [free account](https://www.visualcrossing.com/sign-up) on [VisualCrossing Weather API platform](https://www.visualcrossing.com/weather-api).
 
-2. Open the default config file from /custom/default.conf.js and locate the weatherService section.
+- Open the default config file from /custom/default.conf.js and locate the weatherService section.
 
 ```javascript
 weatherService: {
@@ -75,20 +79,20 @@ weatherService: {
 }
 ```
 
-3. Enable weather service by setting the key 'showWeather' to true, and add your api key provided by VisualCrossing.
+- Enable weather service by setting the key 'showWeather' to true, and add your API key provided by VisualCrossing.
 
-4. Set the 'unitGroup' key to 'us' or 'metric' for showing in Fahrenheight or Celcius.
+- Set the 'unitGroup' key to 'us' or 'metric' for showing in Fahrenheit or Celsius.
 
-5. Remember to set location, to your local address in a format like:
-   - `{ADDRESS},{CITY},{COUNTRY}`
-   - `{CITY},{COUNTRY}`
-   - `{LATITUDE},{LONGITUDE}`
+- Remember to set location, to your local address in a format like:
+  - `{ADDRESS},{CITY},{COUNTRY}`
+  - `{CITY},{COUNTRY}`
+  - `{LATITUDE},{LONGITUDE}`
 
 ---
 
 ## Start the site
 
-> [Content overwiev](#content)
+> [Content overview](#content)
 
 Just Start [index.html](www/index.html) in an browser and see the result.
 
@@ -96,7 +100,7 @@ Just Start [index.html](www/index.html) in an browser and see the result.
 
 ## Customizations
 
-> [Content overwiev](#content)
+> [Content overview](#content)
 
 For more customization open the [custom/default.config.js](www/custom/default.config.js) file and edit it as you like.
 
@@ -104,7 +108,7 @@ If you need more than one configuration, you can create as many `*.conf.js` file
 
 ### Config Main section
 
-> [Content overwiev](#content)
+> [Content overview](#content)
 
 |Key|Default|Description|
 |---|---|---|
@@ -114,7 +118,7 @@ If you need more than one configuration, you can create as many `*.conf.js` file
 
 ### Config Section - format
 
-> [Content overwiev](#content)
+> [Content overview](#content)
 
 |Key|Default|Description|
 |---|---|---|
@@ -123,13 +127,13 @@ If you need more than one configuration, you can create as many `*.conf.js` file
 
 ### Config Section - format - labels
 
-> [Content overwiev](#content)
+> [Content overview](#content)
 
-Labels can be formated as you wish, just add or remove '{?}' as needed and write any text you like.
+Labels can be formatted as you wish, just add or remove '{?}' as needed and write any text you like.
 
 |Key|Default|Description|
 |---|---|---|
-|header|'**{0}** Infoscreen DIY'|Header text in left top corner, just set to empty if you dont want any.<br/>    **{0}** will be replaced with the favicon found here: "[custom/favicon.png](www/custom/favicon.png)"|
+|header|'**{0}** InfoScreen DIY'|Header text in left top corner, just set to empty if you don't want any.<br/>    **{0}** will be replaced with the favicon found here: "[custom/favicon.png](www/custom/favicon.png)"|
 |date|'**{0}**'|Date label format. <br/>    **{0}** will be replaced with current date in selected language|
 |time|'Time **{0}** **{1}**:**{2}**'|Time label format.<br/>    **{0}** will be replaced with am/pm if format.time24hours is false.<br/>    **{1}** will be replaced with current hour.<br/>    **{2}** will be replaced with current minute.<br/>    **{3}** will be replaced with current second|
 |temp|'**{0}** °'|Temperature label format. <br/>    **{0}** will be replaced with current temperature in selected unit group.|
@@ -139,29 +143,29 @@ Labels can be formated as you wish, just add or remove '{?}' as needed and write
 
 ### Config Section - googleSlide
 
-> [Content overwiev](#content)
+> [Content overview](#content)
 
 |Key|Default|Description|
 |---|---|---|
 |slideId|''|[Published Google Slide id.](https://support.google.com/docs/answer/183965?hl=en&co=GENIE.Platform%3DDesktop#publish)|
-|||- In Google Slides, go to this menu: 'File' / 'Share' / 'Publish to web'<br/> -In the embed url copy the id from `docs.google.com/presentation/d/e/<SLIDE_ID>/embed?start=true...`<br>**Example**: `2PACX-1vSBNy-mN519II3gzObo8p32RhVHaL26vFruRj27zJMnrkyOQ1yyCjQBuYkZqlSvOaIWGQz9Woc_sFVM`|
+|||- In Google Slides, go to this menu: 'File' / 'Share' / 'Publish to web'<br/> -In the embed URL copy the id from `docs.google.com/presentation/d/e/<SLIDE_ID>/embed?start=true...`<br>**Example**: `2PACX-1vSBNy-mN519II3gzObo8p32RhVHaL26vFruRj27zJMnrkyOQ1yyCjQBuYkZqlSvOaIWGQz9Woc_sFVM`|
 |durationSek|20|Duration between slides in seconds.|
 |reloadSlide|60|Reload Webpage after **?** seconds.<br>Do this in order to get updated slides.|
 
 ### Config Section - weatherService
 
-> [Content overwiev](#content)
+> [Content overview](#content)
 
 |Key|Default|Description|
 |---|---|---|
 |showWeather|true|Show or hide weather in bottom left corner.|
-|key|''|Your personal code for the weather api, sign up at [www.visualcrossing.com/sign-up](https://www.visualcrossing.com/sign-up) and get a free key|
-|unitGroup|'metric'|Select the [temperature unit](https://www.visualcrossing.com/resources/documentation/weather-api/unit-groups-and-measurement-units/).<br>- **us**:     Fahrenheight<br>- **metric**: Celcius|
+|key|''|Your personal code for the weather API, sign up at [www.visualcrossing.com/sign-up](https://www.visualcrossing.com/sign-up) and get a free key|
+|unitGroup|'metric'|Select the [temperature unit](https://www.visualcrossing.com/resources/documentation/weather-api/unit-groups-and-measurement-units/).<br>- **us**:     Fahrenheit<br>- **metric**: Celsius|
 |location|'copenhagen,denmark'|Location is the **address**, **partial address** or **latitude,longitude** location for which to retrieve weather data.<br/>You can also use **US ZIP Codes**.|
 
 ---
 
-## Apendix
+## Appendix
 
 ### Label positions
 
@@ -172,7 +176,7 @@ To change positions or format, please go to [assets/style.css](www/assets/style.
 
 ### Example config file
 
-> [Content overwiev](#content)
+> [Content overview](#content)
 
 ```javascript
 let config = {
@@ -187,11 +191,11 @@ let config = {
         dateformat_options: {weekday:'long',day:'2-digit',month:'2-digit',timeZone:'UTC'},
         // Show hour in 24 hours or false for 12 hours */
         time24hours: true,
-        // Labels can be formated as you wish, if empty, label is not shown.
+        // Labels can be formatted as you wish, if empty, label is not shown.
         labels: {
             // Header text in left top corner, empty if none.
             //    {0} will be replaced with 'custom/favicon.png'
-            header: '{0} Infoscreen DIY',
+            header: '{0} InfoScreen DIY',
             // Date label format. 
             //    {0} will be replaced with current date.
             date: '{0}',
@@ -230,8 +234,8 @@ let config = {
         // Your personal code for the weather api.
         key: 'ADD YOUR API KEY HERE',
         // Select the temperature unit.
-        //    us:       Fahrenheight
-        //    metric:   Celcius
+        //    us:       Fahrenheit
+        //    metric:   Celsius
         unitGroup: 'metric',
         // Location:  is the address, partial address or 
         //    latitude,longitude location or us zip code.
@@ -249,13 +253,13 @@ define(function () {
 
 ### List of language id's
 
-> [Content overwiev](#content)
+> [Content overview](#content)
 
 Language Id for weekdays, months and weather data, can be set by any of the following id's:
 |Language Id|Language|
 |---|---|
 |ar|Arabic|
-|bg|Bulgiarian|
+|bg|Bulgarian|
 |cs|Czech|
 |da|Danish|
 |de|German|
@@ -277,13 +281,13 @@ Language Id for weekdays, months and weather data, can be set by any of the foll
 |sr|Serbian|
 |sv|Swedish|
 |tr|Turkish|
-|uk|Ukranian|
+|uk|Ukrainian|
 |vi|Vietnamese|
 |zh|Chinese|
 
 ### Date time format options
 
-> [Content overwiev](#content)
+> [Content overview](#content)
 
 You can change the format of the date by adding any of the following options.
 |Key|Values|
@@ -298,35 +302,22 @@ You can change the format of the date by adding any of the following options.
 
 ### License
 
-> [Content overwiev](#content)
+> [Content overview](#content)
 
-This project is licensed under the MIT license.
+This project is licensed under the **MIT license**.
 
 Copyrights on the definition files are respective of each contributor listed at the beginning of each definition file.
 
-```
-MIT License
+## MIT License
 
-Copyright (c) 2024 Brian Kristensen
+### Copyright (c) 2024 Brian Kristensen
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+**The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.**
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
+> THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
 ---
 
-> [Content overwiev](#content)
+> [Content overview](#content)
